@@ -1,0 +1,30 @@
+{
+  "name": "node-jwt-auth",
+  "version": "1.0.0",
+  "description": "Authentication with jwt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xreyc/node-jwt-auth.git"
+  },
+  "keywords": [
+    "node",
+    "jwt",
+    "authentication"
+  ],
+  "author": "Reyco Seguma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xreyc/node-jwt-auth/issues"
+  },
+  "homepage": "https://github.com/xreyc/node-jwt-auth#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.3.1"
+  }
+}
