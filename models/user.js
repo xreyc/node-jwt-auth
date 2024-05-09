@@ -1,11 +1,31 @@
 const mongoose = require('../config/db');
 
 const userSchema = new mongoose.Schema({
-	name: { type: String, required: true },
-	email: { type: String, required: true, unique: true },
-	password: { type: String, required: true },
-	role: { type: String, enum: ['user', 'admin'], default: 'user' },
-	createdAt: { type: Date, default: Date.now },
+	username: {
+		type: String,
+		required: true,
+		unique: true
+	},
+	email: {
+		type: String,
+		required: true,
+		unique: true
+	},
+	password: {
+		type: String,
+		required: true
+	},
+	roles: {
+		type: [
+			{
+				type: mongoose.Schema.Types.ObjectId,
+				ref: 'roles'
+			}
+		],
+		required: true
+	},
+}, {
+	timestamps: true
 });
 
 const User = mongoose.model('users', userSchema);
